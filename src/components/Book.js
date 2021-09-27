@@ -13,7 +13,7 @@ const Book = (props) => {
       </div>
     </section>
   );
-}
+};
 
 Book.propTypes = {
   title: PropTypes.string,
