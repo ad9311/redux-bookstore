@@ -28,14 +28,14 @@ const AddBookForm = () => {
 
   const getBookInfo = (e) => (
     {
-      id: uuid(),
+      item_id: uuid(),
       title: e.target.childNodes[0].value,
       author: 'Anonymous',
       category: e.target.childNodes[1].value,
     }
   );
 
-  const handleAdd = (e) => {
+  const handleAdd = async (e) => {
     e.preventDefault();
     dispatch(addBook(getBookInfo(e)));
   };

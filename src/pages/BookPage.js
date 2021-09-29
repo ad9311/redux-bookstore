@@ -7,8 +7,8 @@ const BookPage = () => {
   const mapBooks = books.map(
     (book) => (
       <Book
-        key={book.id}
-        bookId={book.id}
+        key={book.item_id}
+        bookId={book.item_id}
         title={book.title}
         author="Anonymous"
         category={book.category}
