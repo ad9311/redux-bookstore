@@ -6,7 +6,13 @@ const BookPage = () => {
   const books = useSelector((state) => state.booksReducer);
   const mapBooks = books.map(
     (book) => (
-      <Book key={book.id} title={book.title} author="Anonymous" category={book.category} />
+      <Book
+        key={book.id}
+        bookId={book.id}
+        title={book.title}
+        author="Anonymous"
+        category={book.category}
+      />
     ),
   );
   return (

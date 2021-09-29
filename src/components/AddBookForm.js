@@ -35,7 +35,7 @@ const AddBookForm = () => {
     }
   );
 
-  const add = (e) => {
+  const handleAdd = (e) => {
     e.preventDefault();
     dispatch(addBook(getBookInfo(e)));
   };
@@ -43,7 +43,7 @@ const AddBookForm = () => {
   return (
     <section className="pl-3">
       <h2>Add New Book</h2>
-      <form onSubmit={add}>
+      <form onSubmit={handleAdd}>
         <input placeholder="Book title" className="mr-2" />
         <select required className="mr-2">
           {mapCategories}
