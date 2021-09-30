@@ -12,7 +12,7 @@ const Book = (props) => {
   } = props;
 
   const handleRemove = () => {
-    dispatch(removeBook(bookId));
+    dispatch(removeBook({ item_id: bookId }));
   };
 
   return (
