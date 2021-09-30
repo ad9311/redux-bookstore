@@ -1,26 +1,26 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import fetchBooksAPI from '../fetchBooksAPI';
 
-const ADD_BOOK = 'bookStore/books/ADD_BOOK/fulfilled';
-const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK/fulfilled';
-const FETCH_BOOKS = 'bookStore/books/FETCH_BOOKS/fulfilled';
+const ADD_BOOK = 'bookstore/books/ADD_BOOK/fulfilled';
+const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK/fulfilled';
+const FETCH_BOOKS = 'bookstore/books/FETCH_BOOKS/fulfilled';
 
 const initialState = {
   status: 'empty',
   bookList: [],
 };
 
-export const addBook = createAsyncThunk('bookStore/books/ADD_BOOK', async (book) => {
+export const addBook = createAsyncThunk('bookstore/books/ADD_BOOK', async (book) => {
   await fetchBooksAPI('POST', book);
   return book;
 });
 
-export const removeBook = createAsyncThunk('bookStore/books/REMOVE_BOOK', async (book) => {
+export const removeBook = createAsyncThunk('bookstore/books/REMOVE_BOOK', async (book) => {
   await fetchBooksAPI('DELETE', book);
   return book;
 });
 
-export const fetchBooks = createAsyncThunk('bookStore/books/FETCH_BOOKS', async () => {
+export const fetchBooks = createAsyncThunk('bookstore/books/FETCH_BOOKS', async () => {
   const response = await fetchBooksAPI('GET');
   return response;
 });
