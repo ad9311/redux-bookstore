@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from './redux/cofigureStore';
+import store from './redux/configureStore';
 import Navbar from './components/Navbar';
 import BookPage from './pages/BookPage';
 import CategoriesPage from './pages/CategoriesPage';

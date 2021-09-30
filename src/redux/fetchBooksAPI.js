@@ -39,7 +39,18 @@ const fetchBooksAPI = async (requestMethod, book = { item_id: '' }) => {
     },
     body: optionalBody(),
   });
-  const response = await request.json();
+
+  const getResponse = async () => {
+    if (requestMethod === 'GET') {
+      const response = await request.json();
+      return response;
+    }
+    const response = await request.text();
+    return response;
+  };
+
+  const response = await getResponse();
+
   return arrangeResponseData(response);
 };
 

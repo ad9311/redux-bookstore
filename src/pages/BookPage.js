@@ -6,11 +6,14 @@ import AddBookForm from '../components/AddBookForm';
 
 const BookPage = () => {
   const dispatch = useDispatch();
-  const books = useSelector((state) => state.booksReducer);
+  const books = useSelector((state) => state.bookStore.bookList);
+  const status = useSelector((state) => state.bookStore.status);
 
   useEffect(() => {
-    dispatch(fetchBooks());
-  }, []);
+    if (status === 'empty') {
+      dispatch(fetchBooks());
+    }
+  }, [status]);
 
   const mapBooks = books.map(
     (book) => (
