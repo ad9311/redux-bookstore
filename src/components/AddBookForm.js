@@ -35,7 +35,7 @@ const AddBookForm = () => {
     }
   );
 
-  const handleAdd = async (e) => {
+  const handleAdd = (e) => {
     e.preventDefault();
     dispatch(addBook(getBookInfo(e)));
   };

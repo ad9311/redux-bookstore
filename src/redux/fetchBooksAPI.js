@@ -1,4 +1,19 @@
 const fetchBooksAPI = async (requestMethod, book = { item_id: '' }) => {
+  const arrangeResponseData = (response) => {
+    if (requestMethod === 'GET') {
+      const books = [];
+      Object.entries(response).forEach((entry) => {
+        books.push({
+          item_id: entry[0],
+          title: entry[1][0].title,
+          category: entry[1][0].category,
+        });
+      });
+      return books;
+    }
+    return response;
+  };
+
   const optionalBody = () => {
     if (requestMethod === 'POST') {
       return JSON.stringify(book);
@@ -25,7 +40,7 @@ const fetchBooksAPI = async (requestMethod, book = { item_id: '' }) => {
     body: optionalBody(),
   });
   const response = await request.json();
-  return response;
+  return arrangeResponseData(response);
 };
 
 export default fetchBooksAPI;

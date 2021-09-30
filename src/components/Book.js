@@ -21,6 +21,7 @@ const Book = (props) => {
         <p><strong>{category}</strong></p>
         <h3>{title}</h3>
         <p>{author}</p>
+        <p>{bookId}</p>
       </div>
       <div className="mb-2">
         <input type="button" value="remove" onClick={handleRemove} />

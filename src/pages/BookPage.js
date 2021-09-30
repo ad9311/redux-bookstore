@@ -1,9 +1,17 @@
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchBooks } from '../redux/books/booksReducer';
 import Book from '../components/Book';
 import AddBookForm from '../components/AddBookForm';
 
 const BookPage = () => {
+  const dispatch = useDispatch();
   const books = useSelector((state) => state.booksReducer);
+
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, []);
+
   const mapBooks = books.map(
     (book) => (
       <Book
@@ -15,6 +23,7 @@ const BookPage = () => {
       />
     ),
   );
+
   return (
     <section>
       {mapBooks}
