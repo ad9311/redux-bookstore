@@ -26,14 +26,16 @@ const AddBookForm = () => {
     ),
   );
 
-  const getBookInfo = (e) => (
-    {
+  const getBookInfo = (e) => {
+    const bookInfo = {
       item_id: uuid(),
       title: e.target.childNodes[0].value,
       author: 'Anonymous',
       category: e.target.childNodes[1].value,
-    }
-  );
+    };
+    e.target.childNodes[0].value = '';
+    return bookInfo;
+  };
 
   const handleAdd = (e) => {
     e.preventDefault();
