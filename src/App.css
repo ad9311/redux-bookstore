@@ -1,1 +1,8 @@
-/* App.js */
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;600&family=Roboto+Slab:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(228, 33%, 97%);
+  font-family: 'Roboto Slab', serif;
+}

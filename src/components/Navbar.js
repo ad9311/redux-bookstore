@@ -1,4 +1,6 @@
 import { NavLink } from 'react-router-dom';
+import ProfileIcon from './ProfileIcon';
+import './Navbar.css';
 
 const Navbar = () => {
   const links = [
@@ -9,28 +11,31 @@ const Navbar = () => {
     },
     {
       id: 1,
-      text: 'Books',
+      text: 'BOOKS',
       path: '/',
     },
     {
       id: 2,
-      text: 'Categories',
+      text: 'CATEGORIES',
       path: '/categories',
     },
   ];
 
   const mapLinks = links.map((link) => (
-    <li key={link.id} className="d-inline-block pl-3">
-      <NavLink exact to={link.path}>
-        {link.id === 0 ? <h1>{link.text}</h1> : link.text}
+    <li key={link.id} className="d-inline-block pr-3">
+      <NavLink exact to={link.path} activeClassName="selected">
+        {link.id === 0 ? <h1 className="bookstore">{link.text}</h1> : link.text}
       </NavLink>
     </li>
   ));
 
   return (
-    <header>
-      <nav>
-        {mapLinks}
+    <header className="header">
+      <nav className="pcon-6 d-flex justify-between align-items-center navbar">
+        <ul>
+          {mapLinks}
+        </ul>
+        <ProfileIcon />
       </nav>
     </header>
   );

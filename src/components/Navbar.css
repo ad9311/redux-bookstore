@@ -1,0 +1,33 @@
+.header {
+  background-color: white;
+  box-shadow: 0rem 0.1rem 0.25rem 0.01rem hsl(0, 0%, 91%);
+}
+
+.navbar {
+  background-color: white;
+  font-family: 'Prompt', sans-serif;
+  color: hsl(0, 0%, 53%);
+}
+
+.bookstore {
+  font-size: 1.875rem;
+  color: hsl(206, 100%, 50%);
+}
+
+.navbar a {
+  text-decoration: none;
+  transition: all ease 0.5s;
+}
+
+.navbar a:hover {
+  color: hsl(0, 0%, 7%);
+}
+
+.selected {
+  color: hsl(0, 0%, 7%);
+}
+
+.profile-icon {
+  height: 2.5rem;
+  width: 2.5rem;
+}
