@@ -1,5 +1,5 @@
 import logo from '../img/progress.png';
-import './Book.css';
+import './BookCompletion.css';
 
 const BookCompletion = () => (
   <div className="pos-relative d-flex flex-1">

@@ -1,4 +1,4 @@
-import './Book.css';
+import './BookChapter.css';
 
 const BookChapter = () => (
   <div className="flex-1">
