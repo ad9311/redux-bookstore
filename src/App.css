@@ -1,8 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;600&family=Roboto+Slab:wght@400;700&display=swap');
 
+:root {
+  --blue: hsl(206, 100%, 50%);
+  --medium-blue: hsl(208, 60%, 47%);
+  --dodger-blue: hsl(208, 91%, 59%);
+  --smoke: hsl(0, 0%, 7%);
+  --dark-gray: hsl(0, 0%, 53%);
+  --medium-gray: hsl(0, 0%, 77%);
+  --light-gray: hsl(0, 0%, 91%);
+}
+
+* {
+  font-family: 'Roboto Slab', serif;
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: hsl(228, 33%, 97%);
-  font-family: 'Roboto Slab', serif;
 }

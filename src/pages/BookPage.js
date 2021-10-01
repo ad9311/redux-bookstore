@@ -28,7 +28,7 @@ const BookPage = () => {
   );
 
   return (
-    <section>
+    <section className="pcon-6">
       {mapBooks}
       <AddBookForm />
     </section>

@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/booksReducer';
+import BookCompletion from './BookCompletion';
+import BookChapter from './BookChapter';
+import './Book.css';
 
 const Book = (props) => {
   const dispatch = useDispatch();
@@ -16,15 +19,21 @@ const Book = (props) => {
   };
 
   return (
-    <section className="d-flex align-items-end pl-3">
-      <div>
-        <p><strong>{category}</strong></p>
-        <h3>{title}</h3>
-        <p>{author}</p>
+    <section className="book-section">
+      <div className="flex-2">
+        <div>
+          <span className="category">{category}</span>
+          <h2 className="m-0">{title}</h2>
+          <span className="author">{author}</span>
+        </div>
+        <div>
+          <input className="button pl-0 pr-2" type="button" value="Comments" />
+          <input className="button buttom-center" type="button" value="Remove" onClick={handleRemove} />
+          <input className="button pl-2" type="button" value="Edit" />
+        </div>
       </div>
-      <div className="mb-2">
-        <input type="button" value="remove" onClick={handleRemove} />
-      </div>
+      <BookCompletion />
+      <BookChapter />
     </section>
   );
 };

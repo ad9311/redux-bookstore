@@ -1,17 +1,18 @@
 .header {
   background-color: white;
-  box-shadow: 0rem 0.1rem 0.25rem 0.01rem hsl(0, 0%, 91%);
+  box-shadow: 0 0.1rem 0.25rem 0.01rem var(--light-gray);
 }
 
 .navbar {
   background-color: white;
   font-family: 'Prompt', sans-serif;
-  color: hsl(0, 0%, 53%);
+  color: var(--dark-gray);
 }
 
 .bookstore {
   font-size: 1.875rem;
-  color: hsl(206, 100%, 50%);
+  color: var(--blue);
+  font-family: 'Prompt', sans-serif;
 }
 
 .navbar a {
@@ -20,11 +21,11 @@
 }
 
 .navbar a:hover {
-  color: hsl(0, 0%, 7%);
+  color: var(--smoke);
 }
 
 .selected {
-  color: hsl(0, 0%, 7%);
+  color: var(--smoke);
 }
 
 .profile-icon {
