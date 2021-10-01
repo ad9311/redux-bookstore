@@ -11,6 +11,12 @@ The Bookstore is a simple web app that displays a list of books. You can add a n
 - Redux
 - HTML/CSS
 
+## Live Version
+
+To access the live version of this app follow this link:<br/>
+
+[Redux-Bookstore](https://epic-stonebraker-7bdd00.netlify.app/):
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps:
