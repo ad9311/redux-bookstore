@@ -1,11 +1,3 @@
-.dark-gray {
-  color: var(--dark-gray);
-}
-
-.prompt-font {
-  font-family: 'Prompt', sans-serif;
-}
-
 .book-section {
   margin: 1.5rem 0;
   padding: 1.75rem;
@@ -24,7 +16,7 @@
 }
 
 .author {
-  color: var(--blue);
+  color: var(--dimmed-blue);
 }
 
 .button {
@@ -32,7 +24,7 @@
   margin-top: 1.313rem;
   background-color: transparent;
   border: none;
-  color: var(--blue);
+  color: var(--dimmed-blue);
   font-size: 1rem;
   cursor: pointer;
 }
@@ -45,14 +37,9 @@
   border-width: 0.12rem;
 }
 
-.oval {
+.progress-img {
   width: 4.25rem;
   height: 4.25rem;
-  border-style: solid;
-  border-width: 5px;
-  border-radius: 10rem;
-  border-image-source: linear-gradient(to bottom, var(--medium-blue), var(--dodger-blue));
-  border-image-slice: 1;
 }
 
 .progress-buttom {
@@ -63,7 +50,7 @@
   color: var(--light-gray);
 }
 
-.separator {
+.vertical-separator {
   position: absolute;
   top: 0;
   right: 25%;
