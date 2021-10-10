@@ -1,46 +1,26 @@
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/booksReducer';
+import BooData from './BookData';
+import BookCompletion from './BookCompletion';
+import BookChapter from './BookChapter';
+import './Book.css';
 
 const Book = (props) => {
-  const dispatch = useDispatch();
-  const {
-    bookId,
-    title,
-    author,
-    category,
-  } = props;
-
-  const handleRemove = () => {
-    dispatch(removeBook({ item_id: bookId }));
-  };
-
+  const { bookData } = props;
   return (
-    <section className="d-flex align-items-end pl-3">
-      <div>
-        <p><strong>{category}</strong></p>
-        <h3>{title}</h3>
-        <p>{author}</p>
-      </div>
-      <div className="mb-2">
-        <input type="button" value="remove" onClick={handleRemove} />
-      </div>
+    <section className="book-section">
+      <BooData bookData={bookData} />
+      <BookCompletion />
+      <BookChapter />
     </section>
   );
 };
 
 Book.propTypes = {
-  bookId: PropTypes.string,
-  title: PropTypes.string,
-  author: PropTypes.string,
-  category: PropTypes.string,
+  bookData: PropTypes.shape(),
 };
 
 Book.defaultProps = {
-  bookId: '',
-  title: '',
-  author: '',
-  category: '',
+  bookData: [],
 };
 
 export default Book;

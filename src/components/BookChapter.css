@@ -1,0 +1,7 @@
+.progress-buttom {
+  padding: 0.5rem 2rem;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 0.25rem;
+  color: var(--light-gray);
+}

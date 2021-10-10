@@ -1,18 +1,21 @@
 import { v4 as uuid } from 'uuid';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/booksReducer';
+import './AddBookForm.css';
 
 const AddBookForm = () => {
   const dispatch = useDispatch();
 
   const categories = [
-    'Action & Adventure',
+    'Action',
+    'Adventure',
     'Dystopian',
     'Fantasy',
     'Historical Fiction',
     'History',
     'Horror',
     'LGBTQ+',
+    'Novel',
     'Mystery',
     'Romance',
     'Science Fiction',
@@ -43,14 +46,15 @@ const AddBookForm = () => {
   };
 
   return (
-    <section className="pl-3">
-      <h2>Add New Book</h2>
+    <section className="">
+      <hr className="mt-4 separator" />
+      <h2 className="prompt-font dark-gray">ADD NEW BOOK</h2>
       <form onSubmit={handleAdd}>
-        <input placeholder="Book title" className="mr-2" />
-        <select required className="mr-2">
+        <input className="mr-3 input-form prompt-font" type="text" placeholder="Book title" />
+        <select required className="mr-3 input-form prompt-font">
           {mapCategories}
         </select>
-        <input type="submit" value="Add Book" />
+        <input className="input-submit" type="submit" value="ADD BOOK" />
       </form>
     </section>
   );

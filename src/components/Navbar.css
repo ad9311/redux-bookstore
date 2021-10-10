@@ -1,0 +1,34 @@
+.header {
+  background-color: white;
+  box-shadow: 0 0.1rem 0.25rem 0.01rem var(--light-gray);
+}
+
+.navbar {
+  background-color: white;
+  font-family: 'Prompt', sans-serif;
+  color: var(--dark-gray);
+}
+
+.bookstore {
+  font-size: 1.875rem;
+  color: var(--blue);
+  font-family: 'Prompt', sans-serif;
+}
+
+.navbar a {
+  text-decoration: none;
+  transition: all ease 0.5s;
+}
+
+.navbar a:hover {
+  color: var(--smoke);
+}
+
+.selected {
+  color: var(--smoke);
+}
+
+.profile-icon {
+  height: 2.5rem;
+  width: 2.5rem;
+}

@@ -1,0 +1,27 @@
+.category {
+  color: var(--dark-gray);
+  font-family: 'Prompt', sans-serif;
+  font-weight: bold;
+}
+
+.author {
+  color: var(--dimmed-blue);
+}
+
+.button {
+  height: 1.5rem;
+  margin-top: 1.313rem;
+  background-color: transparent;
+  border: none;
+  color: var(--dimmed-blue);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.buttom-center {
+  padding: 0 1rem;
+  border-left: solid;
+  border-right: solid;
+  border-color: var(--medium-gray);
+  border-width: 0.12rem;
+}

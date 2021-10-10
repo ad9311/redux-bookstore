@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import BookPage from './pages/BookPage';
 import CategoriesPage from './pages/CategoriesPage';
 import NoMatchPage from './pages/NoMatchPage';
+import './App.css';
 
 const App = () => (
   <Provider store={store}>

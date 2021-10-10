@@ -19,16 +19,20 @@ const BookPage = () => {
     (book) => (
       <Book
         key={book.item_id}
-        bookId={book.item_id}
-        title={book.title}
-        author="Anonymous"
-        category={book.category}
+        bookData={
+          {
+            item_id: book.item_id,
+            title: book.title,
+            author: 'Anonymous',
+            category: book.category,
+          }
+        }
       />
     ),
   );
 
   return (
-    <section>
+    <section className="pcon-6">
       {mapBooks}
       <AddBookForm />
     </section>

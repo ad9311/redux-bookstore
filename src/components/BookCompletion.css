@@ -1,0 +1,14 @@
+.progress-img {
+  width: 4.25rem;
+  height: 4.25rem;
+}
+
+.vertical-separator {
+  position: absolute;
+  top: 0;
+  right: 25%;
+  height: 4.5rem;
+  width: 0;
+  color: var(--light-gray);
+  opacity: 25%;
+}
